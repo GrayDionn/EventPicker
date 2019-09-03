@@ -1,0 +1,34 @@
+{
+  "state": "Maryland",
+  "city" : "Baltimore",
+  "events" : [
+    {
+      "name" : "Community Potluck",
+      "ages" : "All Ages",
+      "category" : "Food and Health",
+      "description" :
+        "Take a caulk crow's nest snow grog blossom fire ship cable interloper lass avast careen. Heave to spanker case shot crow's nest topsail line Jack Tar jolly boat loot lad. "
+    },
+    {
+      "name" : "Music Show Case",
+      "ages" : "All Ages",
+      "category" : "Music and Performance",
+      "description" :
+        "Take a caulk crow's nest snow grog blossom fire ship cable interloper lass avast careen. Heave to spanker case shot crow's nest topsail line Jack Tar jolly boat loot lad. "
+    },
+    {
+      "name" : "Art Day",
+      "ages" : "All Ages",
+      "category" : "Creative",
+      "description" :
+        "Take a caulk crow's nest snow grog blossom fire ship cable interloper lass avast careen. Heave to spanker case shot crow's nest topsail line Jack Tar jolly boat loot lad. "
+    },
+        {
+      "name" : "Wine Tasting",
+      "ages" : "21 and Up",
+      "category" : "Food and Health",
+      "description" :
+        "Take a caulk crow's nest snow grog blossom fire ship cable interloper lass avast careen. Heave to spanker case shot crow's nest topsail line Jack Tar jolly boat loot lad. "
+    }
+  ]
+}
