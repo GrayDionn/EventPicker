@@ -19,7 +19,6 @@
 }
 #topsection div {
   display: flex;
-  margin-top: 30px;
   justify-content: space-between;
   align-items: baseline;
 }
@@ -39,11 +38,13 @@
   width:auto;
   display:flex;
   flex-wrap:wrap;
-  justify-content:center;
+  justify-content:flex-start;
+  margin:0px;
 }
 #blocks{
-  height:300px;;
-  width:100%;
+  height:300px;
+  width:30%;
   background-color:pink;
   display:inline-block;
+  margin:0px;
 }

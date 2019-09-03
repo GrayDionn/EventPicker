@@ -16,9 +16,9 @@ request.onload = function() {
 
 
 function populateHeader(jsonObj) {
-  var myH1 = document.createElement('h1');
-  myH1.textContent = jsonObj['state'];
-  document.getElementById("total").appendChild(myH1);
+//  var myH1 = document.createElement('h1');
+//  myH1.textContent = jsonObj['state'];
+//  document.getElementById("total").appendChild(myH1);
 
   for (i = 0; i<jsonObj.events.length; i++) {
 
@@ -28,5 +28,9 @@ function populateHeader(jsonObj) {
     blockHolders.appendChild(blocks);
 
    console.log(i);
+
+    var colors = ["#E8BE18", '#EE9080', '#4F79B3', "#4FA5B3"];
+
+blocks.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
   }
 }
