@@ -1,3 +1,6 @@
+
+
+
 console.log("Hello");
 
         var blockHolders = document.createElement("DIV");
@@ -11,26 +14,25 @@ request.responseType = 'json';
 request.send();
 request.onload = function() {
   var yourEvents = request.response;
-  populateHeader(yourEvents);
+  blockBuild(yourEvents);
 }
 
 
-function populateHeader(jsonObj) {
-//  var myH1 = document.createElement('h1');
-//  myH1.textContent = jsonObj['state'];
-//  document.getElementById("total").appendChild(myH1);
+function blockBuild(jsonObj) {
+
 
   for (i = 0; i<jsonObj.events.length; i++) {
-
     var blocks = document.createElement("DIV");
+
     blocks.id = "blocks"
     document.getElementById("topsection").appendChild(blockHolders);
     blockHolders.appendChild(blocks);
-
-   console.log(i);
-
     var colors = ["#E8BE18", '#EE9080', '#4F79B3', "#4FA5B3"];
+    blocks.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
 
-blocks.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    var title = document.createElement("P");
+    title.innerHTML = "Neighborhood Event";
+    blocks.appendChild(title);
+
   }
 }
