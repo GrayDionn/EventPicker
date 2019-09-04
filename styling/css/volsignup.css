@@ -47,10 +47,10 @@
 
 #blocks {
   height: 300px;
-  width: 30%;
+  min-width: 100%;
   background-color: pink;
   display: inline-block;
-  margin: 0px;
+  margin: 5px;
 }
 
 /*# sourceMappingURL=volsignup.css.map */
