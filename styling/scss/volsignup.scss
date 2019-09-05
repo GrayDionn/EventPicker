@@ -18,11 +18,7 @@
   font-size: 14px;
 }
 #topsection div {
-  display: flex;
-
   justify-content: space-between;
-
-  align-items: baseline;
 }
 #topsection div #total {
   color: #e91e63;
@@ -49,4 +45,26 @@
   background-color:pink;
   display:inline-block;
   margin:5px;
+}
+#group{
+
+}
+#blocks #title{
+  color:white;
+  font-weight:700;
+  margin-left:10px;
+    margin-top: 120px;
+}
+#blocks #name {
+ color:white;
+ margin-left:10px;
+ font-size:40px;
+  padding-right:20px;
+  margin-top:0px;
+}
+#date{
+      color: white;
+    font-size: 17px;
+   margin-left:10px;
+
 }

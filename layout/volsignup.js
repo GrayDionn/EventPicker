@@ -3,11 +3,8 @@
 
 console.log("Hello");
 
-        var blockHolders = document.createElement("DIV");
-    blockHolders.id = "blockHolders";
 
 var requestURL = 'js/events.json';
-
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
@@ -25,27 +22,29 @@ var eventInfo = jsonObj['events'];
     var blocks = document.createElement("DIV");
 
     blocks.id = "blocks"
-    document.getElementById("topsection").appendChild(blockHolders);
-    blockHolders.appendChild(blocks);
+    document.getElementById("blockHolders").append(blocks);
     var colors = ["#E8BE18", '#EE9080', '#4F79B3', "#4FA5B3"];
     blocks.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+
+    var group = document.createElement("DIV");
+    group.id = "group";
+    blocks.appendChild(group);
 
     var title = document.createElement("P");
     title.id = "title";
     title.innerHTML = "Neighborhood Event";
-    blocks.appendChild(title);
+    group.appendChild(title);
 
+     var date = document.createElement('h2');
+    date.textContent = eventInfo[i].date;
+    date.id = "date";
+    group.appendChild(date);
 
-    var eventName = eventInfo[i].name;
-    for (var j=0; j< eventName.length; j++){
+    var name = document.createElement('p');
+    name.textContent = eventInfo[i].name;
+    name.id = "name";
+    group.appendChild(name);
 
-    var name = document.createElement("p");
-    name = eventName[j];
-    var test = String(name);
-    title.append(test);
-    }
-
-    }
-
-
+  }
 }
