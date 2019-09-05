@@ -19,7 +19,7 @@ request.onload = function() {
 
 
 function blockBuild(jsonObj) {
-
+var eventInfo = jsonObj['events'];
 
   for (i = 0; i<jsonObj.events.length; i++) {
     var blocks = document.createElement("DIV");
@@ -31,8 +31,21 @@ function blockBuild(jsonObj) {
     blocks.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
 
     var title = document.createElement("P");
+    title.id = "title";
     title.innerHTML = "Neighborhood Event";
     blocks.appendChild(title);
 
-  }
+
+    var eventName = eventInfo[i].name;
+    for (var j=0; j< eventName.length; j++){
+
+    var name = document.createElement("p");
+    name = eventName[j];
+    var test = String(name);
+    title.append(test);
+    }
+
+    }
+
+
 }
