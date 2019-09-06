@@ -1,24 +1,40 @@
 {
+
   "state": "Maryland",
   "city" : "Baltimore",
   "events" : [
     {
       "name" : "Community Potluck",
       "ages" : "All Ages",
+      "date": "September 2nd 2019",
+      "tags": ["Food", "Family"],
       "category" : "Food and Health",
       "description" :
-        "Take a caulk crow's nest snow grog blossom fire ship cable interloper lass avast careen. Heave to spanker case shot crow's nest topsail line Jack Tar jolly boat loot lad. "
+        "Cake Take a caulk crow's nest snow grog blossom fire ship cable interloper lass avast careen.             Heave to spanker case shot crow's nest topsail line Jack Tar jolly boat loot lad. "
     },
     {
       "name" : "Music Show Case",
       "ages" : "All Ages",
+      "date": "September 3rd 2019",
+      "tags": ["Music"],
       "category" : "Music and Performance",
+      "description" :
+        "Take a caulk crow's nest snow grog blossom fire ship cable interloper lass avast careen. Heave to spanker case shot crow's nest topsail line Jack Tar jolly boat loot lad. "
+    },
+      {
+      "name" : "AfterSchool Care",
+      "ages" : "All Ages",
+      "date": "September 3rd 2019",
+      "tags": ["Family", "Group"],
+      "category" : "Family",
       "description" :
         "Take a caulk crow's nest snow grog blossom fire ship cable interloper lass avast careen. Heave to spanker case shot crow's nest topsail line Jack Tar jolly boat loot lad. "
     },
     {
       "name" : "Art Day",
       "ages" : "All Ages",
+      "date": "September 5th 2019",
+      "tags": ["Family", "Art", "Group", "Creative"],
       "category" : "Creative",
       "description" :
         "Take a caulk crow's nest snow grog blossom fire ship cable interloper lass avast careen. Heave to spanker case shot crow's nest topsail line Jack Tar jolly boat loot lad. "
@@ -26,7 +42,18 @@
         {
       "name" : "Wine Tasting",
       "ages" : "21 and Up",
+      "date": "September 6th 2019",
+      "tags": ["Food"],
       "category" : "Food and Health",
+      "description" :
+        "Take a caulk crow's nest snow grog blossom fire ship cable interloper lass avast careen. Heave to spanker case shot crow's nest topsail line Jack Tar jolly boat loot lad. "
+    },
+     {
+      "name" : "Sports Day",
+      "ages" : "10-18",
+      "date": "September 6th 2019",
+      "tags": ["Active", "Sports"],
+      "category" : "Sportss",
       "description" :
         "Take a caulk crow's nest snow grog blossom fire ship cable interloper lass avast careen. Heave to spanker case shot crow's nest topsail line Jack Tar jolly boat loot lad. "
     }

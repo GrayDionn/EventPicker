@@ -1,7 +1,6 @@
 
 
 
-console.log("Hello");
 
 
 var requestURL = 'js/events.json';
@@ -31,6 +30,16 @@ var eventInfo = jsonObj['events'];
     group.id = "group";
     blocks.appendChild(group);
 
+    for (l in eventInfo[i].tags){
+    var newdiv = document.createElement("DIV");
+      newdiv.id="newdiv";
+    blocks.prepend(newdiv);
+
+    eventInfo[i].tags[l].innerHTML = eventInfo[i].tags[l].value;
+    eventInfo[i].tags[l].id = "text";
+    newdiv.append( eventInfo[i].tags[l] + " ");
+    }
+
     var title = document.createElement("P");
     title.id = "title";
     title.innerHTML = "Neighborhood Event";
@@ -46,5 +55,12 @@ var eventInfo = jsonObj['events'];
     name.id = "name";
     group.appendChild(name);
 
+    };
+
+  document.getElementById("total").addEventListener("mouseover", () => {
+ desc.style.display="inline";
+
+console.log("Hello There");
+});
+
   }
-}
