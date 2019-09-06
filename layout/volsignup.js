@@ -15,7 +15,14 @@ request.onload = function() {
 
 
 function blockBuild(jsonObj) {
-var eventInfo = jsonObj['events'];
+  var eventInfo = jsonObj['events'];
+
+    var totalActivities = document.createElement("P");
+    totalActivities = jsonObj.events.length;
+    totalActivities.id = "totalActivities";
+    document.getElementById("total").append(totalActivities);
+
+    console.log(totalActivities);
 
   for (i = 0; i<jsonObj.events.length; i++) {
     var blocks = document.createElement("DIV");
