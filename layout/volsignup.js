@@ -8,11 +8,11 @@ var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
+
 request.onload = function() {
   var yourEvents = request.response;
   blockBuild(yourEvents);
 }
-
 
 function blockBuild(jsonObj) {
   var eventInfo = jsonObj['events'];
@@ -39,7 +39,7 @@ function blockBuild(jsonObj) {
 
     for (l in eventInfo[i].tags){
     var newdiv = document.createElement("DIV");
-      newdiv.id="newdiv";
+    newdiv.id="newdiv";
     blocks.prepend(newdiv);
 
     eventInfo[i].tags[l].innerHTML = eventInfo[i].tags[l].value;
@@ -52,7 +52,7 @@ function blockBuild(jsonObj) {
     title.innerHTML = "Neighborhood Event";
     group.appendChild(title);
 
-     var date = document.createElement('h2');
+    var date = document.createElement('h2');
     date.textContent = eventInfo[i].date;
     date.id = "date";
     group.appendChild(date);
@@ -65,9 +65,8 @@ function blockBuild(jsonObj) {
     };
 
   document.getElementById("total").addEventListener("mouseover", () => {
- desc.style.display="inline";
+  desc.style.display="inline";
 
-console.log("Hello There");
 });
 
   }

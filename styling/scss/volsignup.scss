@@ -7,7 +7,7 @@
 
 .bar {
   height: 50px;
-  background-color: #ff5722;
+  background-color: black;
   margin-bottom: 100px;
   width:100%;
 }
@@ -39,16 +39,14 @@
   width:auto;
   display:flex;
   flex-wrap:wrap;
-  justify-content:center;
-  margin:0px;
 }
 #blocks{
   height:300px;
-  width:300px;
+  width:100%;
   background-color:pink;
   display:inline-block;
 border: solid 4px white;  padding:10px;
-    transition-duration:1s;
+ transition-duration:.5s;
 
 }
 #newdiv{
@@ -62,13 +60,15 @@ border: solid 4px white;  padding:10px;
 }
 
 #blocks:hover{
-  border-radius:0px 50px 0px 0px;
+  border-radius:0px 20px 0px 0px;
   transition-duration:.5s;
 }
 #blocks #title{
   color:white;
-     margin-top: 100px;
-        font-family:  "HelveticaNeue-Light", "Helvetica", sans-serif;
+  margin-bottom:5px;
+  font-size:12px;
+     margin-top: 130px;
+        font-family:  "HelveticaNeue", "Helvetica", sans-serif;
 }
 #blocks #name {
  color:white;
@@ -78,6 +78,7 @@ border: solid 4px white;  padding:10px;
       font-family:  "HelveticaNeue-Bold", "Helvetica", sans-serif;
 }
 #date{
+  margin:0px;
       color: white;
     font-size: 17px;
         font-family:  "HelveticaNeue-Medium", "Helvetica", sans-serif;
@@ -99,4 +100,26 @@ border: solid 4px white;  padding:10px;
   background-color:rgba(255, 255, 255, 0.19);
   padding:2px 5px;
   border-radius:5px;
+}
+
+@media (min-width: 800px) {
+#blocks{
+justify-content:center;
+width:45%;
+}
+
+#blockHolders{
+ justify-content:center;
+}
+}
+
+
+@media (min-width: 1200px) {
+#blocks{
+justify-content:center;
+width:30%;
+}
+#blockHolders{
+ justify-content:center;
+}
 }
