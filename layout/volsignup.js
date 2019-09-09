@@ -1,8 +1,3 @@
-
-
-
-
-
 var requestURL = 'js/events.json';
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
@@ -12,6 +7,8 @@ request.send();
 request.onload = function() {
   var yourEvents = request.response;
   blockBuild(yourEvents);
+        tagShow();
+
 }
 
 function blockBuild(jsonObj) {
@@ -28,7 +25,6 @@ function blockBuild(jsonObj) {
     blocks.id = "blocks"
     document.getElementById("blockHolders").append(blocks);
     var colors = ["#E8BE18", '#EE9080', '#4F79B3', "#4FA5B3"];
-
 
 
     var group = document.createElement("DIV");
@@ -63,6 +59,11 @@ function blockBuild(jsonObj) {
     var category = document.createElement("p");
     category.textContent = eventInfo[i].category;
 
+    var descHolder = document.createElement("DIV");
+    descHolder.id = "descHolder";
+    descHolder.style.display = "none";
+    group.appendChild(descHolder);
+
     function colorChange () {
     if  (category.textContent === "Food"){
           blocks.id = "blocks1" ;
@@ -70,13 +71,15 @@ function blockBuild(jsonObj) {
           blocks.id = "blocks2";
     } else if (category.textContent === "Family"){
           blocks.id = "blocks3";
-    }  else if (category.textContent === "Art"){
+    } else if (category.textContent === "Art"){
           blocks.id = "blocks4";
     }
-        else if (category.textContent === "Sports"){
+      else if (category.textContent === "Sports"){
           blocks.id = "blocks5";
-        }
-}
+    }
+    }
+
+
     colorChange();
     };
 
@@ -84,4 +87,12 @@ function blockBuild(jsonObj) {
   desc.style.display="inline";
 
 });
+}
+
+function tagShow () {
+ var tagButton = document.createElement("Button");
+  tagButton.innerHTML = "Tags";
+  tagButton.id = "tagButton";
+  document.getElementById("infoHolder").appendChild(tagButton);
+
 }

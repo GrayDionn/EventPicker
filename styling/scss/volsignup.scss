@@ -26,14 +26,7 @@
   display: inline;
   font-size:16px;
 }
-#topsection div button {
-  border: 1px solid orange;
-  background-color: white;
-  color: #ff5722;
-  border-radius: 2px;
-  display:block;
-  margin-top:10px;
-}
+
 #blockHolders{
   height:auto;
   width:auto;
@@ -131,6 +124,30 @@ border: solid 4px white;  padding:10px;
   background-color:rgba(255, 255, 255, 0.19);
   padding:2px 5px;
   border-radius:5px;
+}
+
+#descHolder{
+width:100%;
+height:200px;
+ background-color:rgba(255, 255, 255, 0.61);
+  z-index:10;
+      position: relative;
+    top: -245px;
+}
+
+#infoHolder{
+ border:none;
+  margin-bottom: 0px;
+}
+#infoHolder button{
+    padding-left:0px;
+  border:none;
+  margin-left:30px;
+  background-color: white;
+  color: #ff5722;
+  border-radius: 2px;
+  display:block;
+  margin-top:10px;
 }
 
 @media (min-width: 800px) {
