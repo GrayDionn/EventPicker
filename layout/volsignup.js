@@ -22,15 +22,13 @@ function blockBuild(jsonObj) {
     totalActivities.id = "totalActivities";
     document.getElementById("total").append(totalActivities);
 
-    console.log(totalActivities);
-
   for (i = 0; i<jsonObj.events.length; i++) {
     var blocks = document.createElement("DIV");
 
     blocks.id = "blocks"
     document.getElementById("blockHolders").append(blocks);
     var colors = ["#E8BE18", '#EE9080', '#4F79B3', "#4FA5B3"];
-    blocks.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
 
 
     var group = document.createElement("DIV");
@@ -62,11 +60,28 @@ function blockBuild(jsonObj) {
     name.id = "name";
     group.appendChild(name);
 
+    var category = document.createElement("p");
+    category.textContent = eventInfo[i].category;
+
+    function colorChange () {
+    if  (category.textContent === "Food"){
+          blocks.id = "blocks1" ;
+    } else if (category.textContent === "Music"){
+          blocks.id = "blocks2";
+    } else if (category.textContent === "Family"){
+          blocks.id = "blocks3";
+    }  else if (category.textContent === "Art"){
+          blocks.id = "blocks4";
+    }
+        else if (category.textContent === "Sports"){
+          blocks.id = "blocks5";
+        }
+}
+    colorChange();
     };
 
   document.getElementById("total").addEventListener("mouseover", () => {
   desc.style.display="inline";
 
 });
-
-  }
+}
