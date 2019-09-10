@@ -13,8 +13,19 @@ request.onload = function() {
 
 function blockBuild(jsonObj) {
   var eventInfo = jsonObj['events'];
-  var tagInfo = eventInfo[0].category;
-  console.log(tagInfo);
+
+      let objects = [];
+
+  for(var q = 0; q <eventInfo.length; q++){
+    var group = eventInfo[q].category;
+    let newGroup = objects.push(eventInfo[q].category);
+    console.log(group);
+
+  }
+
+  console.log(objects)
+
+
 
     var totalActivities = document.createElement("P");
     totalActivities = jsonObj.events.length;
@@ -23,7 +34,6 @@ function blockBuild(jsonObj) {
 
   for (i = 0; i<jsonObj.events.length; i++) {
     var blocks = document.createElement("DIV");
-    console.log(eventInfo[i].category.length);
 
     blocks.id = "blocks"
     document.getElementById("blockHolders").append(blocks);
@@ -106,4 +116,5 @@ function tagShow () {
   chip.innerHTML ="Food";
   chip.id = "chip";
   tagButton.append(chip);
+
 }
