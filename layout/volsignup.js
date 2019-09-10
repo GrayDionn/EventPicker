@@ -7,12 +7,14 @@ request.send();
 request.onload = function() {
   var yourEvents = request.response;
   blockBuild(yourEvents);
-        tagShow();
+  tagShow();
 
 }
 
 function blockBuild(jsonObj) {
   var eventInfo = jsonObj['events'];
+  var tagInfo = eventInfo[0].category;
+  console.log(tagInfo);
 
     var totalActivities = document.createElement("P");
     totalActivities = jsonObj.events.length;
@@ -21,6 +23,7 @@ function blockBuild(jsonObj) {
 
   for (i = 0; i<jsonObj.events.length; i++) {
     var blocks = document.createElement("DIV");
+    console.log(eventInfo[i].category.length);
 
     blocks.id = "blocks"
     document.getElementById("blockHolders").append(blocks);
@@ -40,7 +43,6 @@ function blockBuild(jsonObj) {
     eventInfo[i].tags[l].id = "text";
     newdiv.append( eventInfo[i].tags[l] + " ");
     }
-
     var title = document.createElement("P");
     title.id = "title";
     title.innerHTML = "Neighborhood Event";
@@ -67,32 +69,41 @@ function blockBuild(jsonObj) {
     function colorChange () {
     if  (category.textContent === "Food"){
           blocks.id = "blocks1" ;
+          blocks.className = "blocks";
     } else if (category.textContent === "Music"){
           blocks.id = "blocks2";
+                blocks.className = "blocks";
+
     } else if (category.textContent === "Family"){
           blocks.id = "blocks3";
+                blocks.className = "blocks";
+
     } else if (category.textContent === "Art"){
           blocks.id = "blocks4";
+                blocks.className = "blocks";
+
     }
       else if (category.textContent === "Sports"){
           blocks.id = "blocks5";
-    }
-    }
-
+                  blocks.className = "blocks";
+    }}
 
     colorChange();
     };
 
-  document.getElementById("total").addEventListener("mouseover", () => {
-  desc.style.display="inline";
 
-});
-}
+};
+
 
 function tagShow () {
- var tagButton = document.createElement("Button");
-  tagButton.innerHTML = "Tags";
+  var blocks = document.getElementsByClassName("blocks");
+  var tagButton = document.createElement("P");
+  tagButton.innerHTML = "Filter by";
   tagButton.id = "tagButton";
   document.getElementById("infoHolder").appendChild(tagButton);
 
+  var chip = document.createElement("Button");
+  chip.innerHTML ="Food";
+  chip.id = "chip";
+  tagButton.append(chip);
 }
